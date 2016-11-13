@@ -1,0 +1,27 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+
+#carousel {
+	text-decoration: none;
+	color: red;
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+
+ul {
+	width: 3000px;
+  	margin:0;
+  	padding:0;
+}
+
+
+li {
+	width: 600px;
+	float: left;
+	list-style: none;
+}

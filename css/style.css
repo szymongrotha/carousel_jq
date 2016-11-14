@@ -3,25 +3,56 @@ body {
 	justify-content: center;
 	align-content: center;
 	text-align: center;
+	color: white;
+	font-size: 50px;
 }
 
 #carousel {
 	text-decoration: none;
-	color: red;
 	width: 600px;
 	height: 400px;
 	overflow: hidden;
 }
 
-ul {
+#carousel ul {
 	width: 3000px;
   	margin:0;
   	padding:0;
 }
 
-
 li {
 	width: 600px;
+	height: 400px;
 	float: left;
 	list-style: none;
+}
+
+.arrows  {
+	width: 600px;
+	height: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.one {
+	background-image: url('../img/1.jpg');
+}
+
+.two {
+	background-image: url('../img/2.jpg');
+}
+
+.three {
+	background-image: url('../img/3.jpg');
+}
+
+.four {
+	background-image: url('../img/4.jpg');
+}
+
+.five {
+	background-image: url('../img/5.jpg');
 }

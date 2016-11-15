@@ -24,8 +24,6 @@ $(function(){
 		carouselList.css({marginLeft:0});
 	}
 
-	changeSlide()
-
 	$('.fa-chevron-right').on('click', function() {
 			changeSlide()
 	})

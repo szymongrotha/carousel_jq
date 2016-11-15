@@ -11,6 +11,7 @@ body {
 	text-decoration: none;
 	width: 600px;
 	height: 400px;
+    position: relative;
 	overflow: hidden;
 }
 
@@ -28,14 +29,29 @@ li {
 }
 
 .arrows  {
-	width: 600px;
-	position: static;
-	height: 400px;
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
+	display: flex;
 	text-shadow: 2px 2px 2px #000000;
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.points  {
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	text-shadow: 2px 2px 2px #000000;
+	position: absolute;
+	bottom: 20px;
+	left: 60px;
+	right: 60px;
+	font-size: 30px;
 }
 
 .arrows:first-child {

@@ -47,7 +47,6 @@ $(function(){
 		var lastItem = carouselList.find('li:last');
 		lastItem.after(firstItem)
 		carouselList.css({marginLeft:-600});
-		i++;
 		checkPoint();
 	}
 
@@ -56,8 +55,6 @@ $(function(){
 		var lastItem = carouselList.find('li:last');
 		firstItem.before(lastItem)
 		carouselList.css({marginLeft:-600});
-		i--;
-		i = index;
 		checkPoint();
 	}
 
@@ -85,11 +82,13 @@ $(function(){
 	$('.fa-chevron-right').on('click', function () {
 		changeSlideRight();
 		resetInterval();
+		i++;
 	})
 
 	$('.fa-chevron-left').on('click', function() {
 		changeSlideLeft();
 		resetInterval();
+		i--;
 	})
 
 });	

@@ -12,7 +12,7 @@ body {
 	width: 600px;
 	height: 400px;
     position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #carousel ul {
@@ -53,3 +53,9 @@ li {
 	right: 60px;
 	font-size: 30px;
 }
+
+.animate {
+	-webkit-animation:pulse 1s infinite;
+}
+
+

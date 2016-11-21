@@ -53,9 +53,3 @@ li {
 	right: 60px;
 	font-size: 30px;
 }
-
-.animate {
-	-webkit-animation:pulse 1s infinite;
-}
-
-

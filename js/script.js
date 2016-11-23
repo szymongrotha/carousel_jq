@@ -9,9 +9,9 @@ $(function(){
 		function clickSlide() {
 			for(j = 0; j < diff; j++) {
 					if (index > i) {
-						changeSlideRight();
+						carouselList.animate({'marginLeft':-1200}, 100, moveRight);
 					} else if (index < i) {
-						changeSlideLeft();
+						carouselList.animate({'marginLeft':0}, 100, moveLeft);
 					}
 				}
 		}
@@ -36,10 +36,12 @@ $(function(){
 
 	function changeSlideRight(){
 		carouselList.animate({'marginLeft':-1200}, 500, moveRight);
+		i++;
 	}
 
 	function changeSlideLeft(){
 		carouselList.animate({'marginLeft':0}, 500, moveLeft);
+		i--;
 	}
 
 	function moveRight(){
@@ -82,13 +84,13 @@ $(function(){
 	$('.fa-chevron-right').on('click', function () {
 		changeSlideRight();
 		resetInterval();
-		i++;
+		
 	})
 
 	$('.fa-chevron-left').on('click', function() {
 		changeSlideLeft();
 		resetInterval();
-		i--;
+		
 	})
 
 });	

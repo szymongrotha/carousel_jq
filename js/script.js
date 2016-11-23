@@ -9,9 +9,9 @@ $(function(){
 		function clickSlide() {
 			for(j = 0; j < diff; j++) {
 					if (index > i) {
-						changeSlideRight();
+						carouselList.animate({'marginLeft':-1200}, 100, moveRightFast);
 					} else if (index < i) {
-						changeSlideLeft();
+						carouselList.animate({'marginLeft':0}, 100, moveLeftFast);
 					}
 				}
 		}
@@ -47,10 +47,28 @@ $(function(){
 		var lastItem = carouselList.find('li:last');
 		lastItem.after(firstItem)
 		carouselList.css({marginLeft:-600});
+		i++;
 		checkPoint();
 	}
 
 	function moveLeft(){
+		var firstItem = carouselList.find('li:first');
+		var lastItem = carouselList.find('li:last');
+		firstItem.before(lastItem)
+		carouselList.css({marginLeft:-600});
+		i--;
+		checkPoint();
+	}
+
+	function moveRightFast(){
+		var firstItem = carouselList.find('li:first');
+		var lastItem = carouselList.find('li:last');
+		lastItem.after(firstItem)
+		carouselList.css({marginLeft:-600});
+		checkPoint();
+	}
+
+	function moveLeftFast(){
 		var firstItem = carouselList.find('li:first');
 		var lastItem = carouselList.find('li:last');
 		firstItem.before(lastItem)
@@ -82,13 +100,13 @@ $(function(){
 	$('.fa-chevron-right').on('click', function () {
 		changeSlideRight();
 		resetInterval();
-		i++;
+		
 	})
 
 	$('.fa-chevron-left').on('click', function() {
 		changeSlideLeft();
 		resetInterval();
-		i--;
+		
 	})
 
 });	

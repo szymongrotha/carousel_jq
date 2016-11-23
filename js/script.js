@@ -9,9 +9,9 @@ $(function(){
 		function clickSlide() {
 			for(j = 0; j < diff; j++) {
 					if (index > i) {
-						carouselList.animate({'marginLeft':-1200}, 100, moveRightFast);
+						carouselList.animate({'marginLeft':-1200}, 100, moveRight);
 					} else if (index < i) {
-						carouselList.animate({'marginLeft':0}, 100, moveLeftFast);
+						carouselList.animate({'marginLeft':0}, 100, moveLeft);
 					}
 				}
 		}
@@ -36,10 +36,12 @@ $(function(){
 
 	function changeSlideRight(){
 		carouselList.animate({'marginLeft':-1200}, 500, moveRight);
+		i++;
 	}
 
 	function changeSlideLeft(){
 		carouselList.animate({'marginLeft':0}, 500, moveLeft);
+		i--;
 	}
 
 	function moveRight(){
@@ -47,28 +49,10 @@ $(function(){
 		var lastItem = carouselList.find('li:last');
 		lastItem.after(firstItem)
 		carouselList.css({marginLeft:-600});
-		i++;
 		checkPoint();
 	}
 
 	function moveLeft(){
-		var firstItem = carouselList.find('li:first');
-		var lastItem = carouselList.find('li:last');
-		firstItem.before(lastItem)
-		carouselList.css({marginLeft:-600});
-		i--;
-		checkPoint();
-	}
-
-	function moveRightFast(){
-		var firstItem = carouselList.find('li:first');
-		var lastItem = carouselList.find('li:last');
-		lastItem.after(firstItem)
-		carouselList.css({marginLeft:-600});
-		checkPoint();
-	}
-
-	function moveLeftFast(){
 		var firstItem = carouselList.find('li:first');
 		var lastItem = carouselList.find('li:last');
 		firstItem.before(lastItem)
